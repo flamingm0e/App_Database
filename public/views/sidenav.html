@@ -1,0 +1,18 @@
+<ul class="nav nav-sidebar" >
+    <div class="list-group" style="margin-top: -14px;">
+        <a class="list-group-item text-center" ng-href="/">Home</a>
+        <a  data-ng-repeat="c in global.categories | orderBy:'category'"
+            ng-href="/{{c.category | lowercase | strreplace:' & ':'-' | strreplace:' ':'_'}}"
+            class="list-group-item text-center"
+            ng-bind="c.category"
+            ng-click="refresh()">
+        </a>
+    </div>
+    <!--<li data-ng-repeat="c in global.categories | orderBy:'category'">-->
+    <!--<a href="/{{c.category | lowercase | strreplace:' & ':'-' | strreplace:' ':'_'}}"-->
+    <!--ng-bind="c.category"-->
+    <!--data-toggle="tooltip" data-placement="right" title="" data-original-title="{{c.description}}">-->
+    <!--<span class="sr-only">(current)</span>-->
+    <!--</a>-->
+    <!--</li>-->
+</ul>

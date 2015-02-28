@@ -1,0 +1,65 @@
+<!-- public/views/category.html -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="centered" ng-bind="appHeader | uppercase" ></h2>
+        <!--<button type="button" class="btn btn-danger btn-circle btn-lg pull-right">-->
+            <!--<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>-->
+        <!--</button>-->
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>App Name</th>
+                    <th>File Name</th>
+                    <th class="centered">Completed</th>
+                    <th class="centered">Staged</th>
+                    <th class="centered">Fix Activity</th>
+                    <th class="centered hidden-md hidden-sm hidden-xs ">Link or Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-ng-repeat="i in appDetails | orderBy: 'appName' | filter: global.search track by $index">
+                    <td data-ng-bind="i.appName"></td>
+                    <td ng-bind="i.fileName">
+                    <td>
+                        <div class="checkbox centered">
+                            <label for="{{i._id}}-complete">
+                                <input type="checkbox"
+                                ng-model="i.complete"
+                                ng-checked="i.complete==true"
+                                ng-change="updateApp(i)"
+                                id="{{i._id}}-complete">
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="checkbox centered">
+                            <label for="{{i._id}}-stage">
+                                <input type="checkbox"
+                                       ng-model="i.stage"
+                                       ng-checked="i.stage==true"
+                                       ng-change="updateApp(i)"
+                                       id="{{i._id}}-stage">
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="checkbox centered">
+                            <label for="{{i._id}}-fix">
+                                <input type="checkbox"
+                                       ng-model="i.fix"
+                                       ng-checked="i.fix==true"
+                                       ng-change="updateApp(i)"
+                                       id="{{i._id}}-fix">
+                            </label>
+                        </div>
+                    </td>
+                    <td class="hidden-md hidden-sm hidden-xs" ng-bind="i.linkDescription"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
