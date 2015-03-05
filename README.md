@@ -10,9 +10,9 @@ These statuses will be updated in the database (_current deployment method_) or 
 
 ##Install
 
-`git clone 'URL OF REPO'`
+`git clone 'git@github.com:flamingm0e/App_Database.git'`
 
-`cd appDatabase`
+`cd App_Database`
 
 `npm install`
 
