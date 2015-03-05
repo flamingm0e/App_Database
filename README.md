@@ -25,6 +25,10 @@ You will need a mongodb to connect to, or in the future we will have JSON capabi
 
 Within `/server.js` edit the line that says `var db = monk('mongodb://192.168.254.25:27017/appsDB');` with the connection to your database
 
+A test database has been set up on mongolab for use with this application if you want to play around with it.
+
+`mongodb://appdb_user:ReallyStrongPassword@ds063240.mongolab.com:63240/appsdb`
+
 
 ##Run the Application
 We have preconfigured the project with a simple development web server. The simplest way to start this server is:
