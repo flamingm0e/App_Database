@@ -13,8 +13,7 @@ angular.module('AppServices', [])
             query: {method:'GET', isArray: true}})
     })
     .factory('appsData', function($resource) {
-        //use $resource to talk to the individual category,
-        // using getPath to extract the location
+        //use $resource to talk to the individual category
         return $resource('/api/:category', {}, {
             query: {method:'GET', params:{category: '@category'}, isArray: true},
             save: {method:'POST', params:{category:'@appCategory'}},

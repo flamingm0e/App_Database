@@ -1,9 +1,9 @@
 <!-- Modal -->
 <!--<div class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="addAppModalLabel" aria-hidden="true">-->
-    <div class="modal-dialog" data-ng-controller="AddController">
-        <div class="modal-content">
+    <!--<div class="modal-dialog" data-ng-controller="AddController">-->
+        <!--<div class="modal-content">-->
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-ng-click="cancel()">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <h2 class="modal-title" id="myModalLabel">Add Application</h2>
@@ -85,9 +85,9 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <input type="button" class="btn btn-default" data-dismiss="modal" ng-click="reset()" value="Cancel" />
+                <input type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancel()" value="Cancel" />
                 <input class="btn btn-primary" type="submit" data-dismiss="modal" ng-click="addApp(appCat, newApp)" value="Add" />
             </div>
-        </div>
-    </div>
+        <!--</div>-->
+    <!--</div>-->
 <!--</div>-->

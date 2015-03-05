@@ -2,18 +2,17 @@
  * Created by m@ on 2/19/15.
  */
 angular.module('AppCtrl', [])
-    .controller('CatController', function ($scope, $http, getPath, appsData, $timeout) {
-        //$scope.appDetails = appsData.query({category: getPath});
+    .controller('CatController', function ($scope, $http, getPath, appsData) {
         $scope.loadData = function() {
             $scope.appDetails = appsData.query({category: getPath});
-        }
+        };
         $scope.loadData();
         $scope.updateApp = function (item) {
             appsData.update({category: getPath}, item);
-            //$http.post('/api/'+getPath, item)
         };
+        $scope.global.fil.complete = false;
     })
-    .controller('MainController', function ($rootScope, $scope, appConfig, getPath, getCats, $window) {
+    .controller('MainController', function ($rootScope, $scope, appConfig, getPath, getCats, $window, $modal) {
         $scope.projectName = appConfig.name;
         $scope.refresh = function(){
             $window.location.reload();
@@ -24,13 +23,21 @@ angular.module('AppCtrl', [])
         $scope.appHeader = 'Applications in '+location+' category';
         $rootScope.global = {
             search: '',
-            categories: getCats.query()
+            categories: getCats.query(),
+            fil: { }
+        };
+        $scope.openAppForm = function (size) {
+            var modalInstance = $modal.open({
+                templateUrl:'views/applicationform.html',
+                controller: 'AddController',
+                size : size
+            })
+        };
+        $scope.showAll = function() {
+            $scope.global.fil = {};
         };
     })
-    //.controller('NavController', function ($scope, getCats) {
-    //    $scope.categories = getCats.query();
-    //})
-    .controller('AddController', function($scope, $http, appsData, $timeout) {
+    .controller('AddController', function($scope, $http, appsData, $timeout, $modalInstance) {
         $scope.master = {};
         $scope.appCat = {};
         $scope.addApp = function(appCat, newApp) {
@@ -43,9 +50,13 @@ angular.module('AppCtrl', [])
             $timeout(function() {
                 location.reload();
             }, 250);
+            $modalInstance.close();
         };
         $scope.reset = function() {
             $scope.newApp = angular.copy($scope.master);
         };
         $scope.reset();
+        $scope.cancel = function () {
+            $modalInstance.dismiss('cancel');
+        }
     });

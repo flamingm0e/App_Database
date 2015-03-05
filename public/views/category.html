@@ -1,4 +1,5 @@
 <!-- public/views/category.html -->
+
 <div class="panel panel-default">
     <div class="panel-heading">
         <h2 class="centered" ng-bind="appHeader | uppercase" ></h2>
@@ -20,7 +21,9 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr data-ng-repeat="i in appDetails | orderBy: 'appName' | filter: global.search track by $index">
+                <tr data-ng-repeat="i in appDetails | orderBy: 'appName'
+                     | filter: global.search | filter:global.fil
+                     track by $index">
                     <td data-ng-bind="i.appName"></td>
                     <td ng-bind="i.fileName">
                     <td>
