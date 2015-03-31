@@ -22,7 +22,7 @@
                 </thead>
                 <tbody>
                 <tr data-ng-repeat="i in appDetails | orderBy: 'appName'
-                     | filter: global.search | filter:global.fil
+                     | filter: global.search | filter:global.filterMethod()
                      track by $index">
                     <td data-ng-bind="i.appName"></td>
                     <td ng-bind="i.fileName">
