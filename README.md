@@ -10,7 +10,7 @@ These statuses will be updated in the database (_current deployment method_) or 
 
 ##Install
 
-`git clone 'git@github.com:flamingm0e/App_Database.git'`
+`git clone git@github.com:flamingm0e/App_Database.git`
 
 `cd App_Database`
 
