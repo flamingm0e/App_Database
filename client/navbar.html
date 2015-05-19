@@ -1,0 +1,60 @@
+<template name="navbar">
+    <nav>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">App Database</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary btn-lg navbar-btn" data-toggle="modal" data-target="#addAppModal">
+                            Add Application
+                        </button>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary navbar-btn active">
+                                <input type="checkbox" autocomplete="off" > Incomplete
+                            </label>
+                            <label class="btn btn-primary navbar-btn">
+                                <input type="checkbox" autocomplete="off"> Staged
+                            </label>
+                            <label class="btn btn-primary navbar-btn">
+                                <input type="checkbox" autocomplete="off"> Completed
+                            </label>
+                        </div>
+                    </li>
+                    <form class="navbar-form navbar-right">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button">Go!</button>
+                                </span>
+                        </div>
+                    </form>
+                </ul>
+                <!--<ul class="nav navbar-nav navbar-left hidden-md hidden-lg">-->
+                <!--<li data-ng-repeat="cat in global.categories | orderBy:'category'">-->
+                <!--<a ng-href="/{{cat.category | lowercase | strreplace:' & ':'-' | strreplace:' ':'_'}}"-->
+                <!--data-ng-bind="cat.category"-->
+                <!--ng-click="refresh()">-->
+                <!--<span class="sr-only">(current)</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+            </div>
+        </div>
+    </nav>
+    <div id="addAppModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="addAppModalLabel" aria-hidden="true">
+        {{> appForm}}
+    </div>
+</template>
