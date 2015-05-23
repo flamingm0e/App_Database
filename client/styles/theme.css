@@ -1,16 +1,16 @@
 /*
-* Base structure
-*/
+ * Base structure
+ */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 
 /*
-* Global add-ons
-*/
+ * Global add-ons
+ */
 
 .sub-header {
   padding-bottom: 10px;
@@ -18,16 +18,16 @@ body {
 }
 
 /*
-* Top navigation
-* Hide default border to remove 1px line.
-*/
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
 .navbar-fixed-top {
   border: 0;
 }
 
 /*
-* Sidebar
-*/
+ * Sidebar
+ */
 
 /* Hide for mobile, show later */
 .sidebar {
@@ -68,8 +68,8 @@ body {
 
 
 /*
-* Main content
-*/
+ * Main content
+ */
 
 .main {
   padding: 20px;
@@ -84,35 +84,22 @@ body {
   margin-top: 0;
 }
 
-.centered{
-  text-align:center;
-  vertical-align:middle;
-}
-.table > tbody > tr > td {
-  vertical-align: middle;
-}
-.btn-circle {
-  width: 30px;
-  height: 30px;
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
   text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 1.428571429;
-  border-radius: 15px;
 }
-.btn-circle.btn-lg {
-  width: 50px;
-  height: 50px;
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 25px;
+.placeholders h4 {
+  margin-bottom: 0;
 }
-.btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  padding: 10px 16px;
-  font-size: 24px;
-  line-height: 1.33;
-  border-radius: 35px;
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
 }

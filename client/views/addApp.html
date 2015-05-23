@@ -1,0 +1,78 @@
+<template name="addApp">
+  <h2 class="text-center">Add Application</h2>
+    <hr/>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="col-sm-1 hidden-xs control-label " for="catSelect">
+        <span aria-hidden="true">
+          <i class="fa fa-list fa-2x"></i>
+        </span>
+      </label>
+      <div class="col-xs-12 col-sm-1">
+        <select id="catSelect" name="catSelect" class="form-control" title="Category" style="color: #444444">
+          <option value="" disabled selected>Select a Category</option>
+            {{#each categories}}
+              <option>{{ category }}</option>
+            {{/each}}
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1 hidden-xs" for="inputAppName">
+        <span aria-hidden="true">
+          <i class="fa fa-android fa-2x"></i>
+        </span>
+      </label>
+      <div class="col-xs-12 col-sm-11">
+        <input type="text" name="appName" class="form-control" id="inputAppName" placeholder="Application Name" style="color: #444444">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1 hidden-xs" for="inputFileName">
+        <span aria-hidden="true">
+          <i class="fa fa-file fa-2x"></i>
+        </span>
+      </label>
+      <div class="col-xs-12 col-sm-11">
+        <input type="text" class="form-control" id="inputFileName" placeholder="File Name" style="color: #444444">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-xs-offset-1 col-xs-11">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Complete
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-xs-offset-1 col-xs-11">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Staged
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-xs-offset-1 col-xs-11">
+        <div class="checkbox">
+          <label><input type="checkbox"> Fix Activity</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-1 hidden-xs" for="inputLinkDesc"><i class="fa fa-info-circle fa-2x"></i></label>
+      <div class="col-xs-12 col-sm-11">
+        <input type="text" class="form-control" id="inputLinkDesc" placeholder="Link or Description (optional)" style="color: #444444">
+      </div>
+    </div>
+    <div class="col-sm-offset-4 col-sm-4">
+      <input id="submitAppAdd" class="btn btn-lg btn-block btn-primary" type="submit" data-dismiss="modal" value="Add" />
+    </div>
+    <div class="col-sm-offset-2 col-sm-2">
+      <button class="btn btn-lg btn-block btn-default">Cancel/Clear</button>
+    </div>
+  </form>
+</template>
