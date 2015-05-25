@@ -1,0 +1,27 @@
+<template name="tableWrapper">
+  <!-- <div class="panel panel-default"> -->
+    <!-- <div class="panel-heading"> -->
+      <!-- <h2 class="text-center">{{pageTitle}}</h2> -->
+    <!-- </div> -->
+    <!-- <div class="panel-body"> -->
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+            <th>App Name</th>
+            <th>File Name</th>
+            <th class="text-center">Completed</th>
+            <th class="text-center">Staged</th>
+            <th class="text-center">Fix Activity</th>
+            <th class="text-center hidden-md hidden-sm hidden-xs ">Link or Description</th>
+          </tr>
+          </thead>
+          <tbody>
+          {{> UI.contentBlock}}
+          </tbody>
+        </table>
+      </div>
+    <!-- </div> -->
+  <!-- </div> -->
+  <!-- <p>{{this.footer}}</p> -->
+</template>

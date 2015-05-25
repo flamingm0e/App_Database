@@ -3,3 +3,8 @@ iron:router
 twbs:bootstrap
 fortawesome:fontawesome
 fxv:bootstrap-paper
+iron:dynamic-template
+aldeed:autoform
+aldeed:collection2
+momentjs:moment
+jquery

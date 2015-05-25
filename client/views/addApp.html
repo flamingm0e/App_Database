@@ -8,7 +8,7 @@
           <i class="fa fa-list fa-2x"></i>
         </span>
       </label>
-      <div class="col-xs-12 col-sm-1">
+      <div class="col-xs-12 col-sm-11">
         <select id="catSelect" name="catSelect" class="form-control" title="Category" style="color: #444444">
           <option value="" disabled selected>Select a Category</option>
             {{#each categories}}
@@ -41,7 +41,7 @@
       <div class="col-xs-offset-1 col-xs-11">
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Complete
+            <input type="checkbox" checked="{{isChecked}}"> Complete
           </label>
         </div>
       </div>
@@ -50,7 +50,7 @@
       <div class="col-xs-offset-1 col-xs-11">
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Staged
+            <input type="checkbox" checked="{{isChecked}}"> Staged
           </label>
         </div>
       </div>
@@ -58,7 +58,9 @@
     <div class="form-group">
       <div class="col-xs-offset-1 col-xs-11">
         <div class="checkbox">
-          <label><input type="checkbox"> Fix Activity</label>
+          <label>
+            <input type="checkbox" checked="{{isChecked}}"> Fix Activity
+          </label>
         </div>
       </div>
     </div>
@@ -68,11 +70,9 @@
         <input type="text" class="form-control" id="inputLinkDesc" placeholder="Link or Description (optional)" style="color: #444444">
       </div>
     </div>
-    <div class="col-sm-offset-4 col-sm-4">
-      <input id="submitAppAdd" class="btn btn-lg btn-block btn-primary" type="submit" data-dismiss="modal" value="Add" />
-    </div>
-    <div class="col-sm-offset-2 col-sm-2">
-      <button class="btn btn-lg btn-block btn-default">Cancel/Clear</button>
+    <div class="sm-col-12">
+      <input id="clearNewApp" class="btn btn-lg btn-default pull-left col-sm-2" type="submit" value="Cancel"/>
+      <input id="submitNewApp" class="btn btn-lg btn-primary pull-right col-sm-2" type="submit" value="Add" />
     </div>
   </form>
 </template>

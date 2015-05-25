@@ -5,6 +5,7 @@
 </head>
 
 <body>
+  
 </body>
 
 <template name="layout">
@@ -23,5 +24,13 @@
       </div>
     </div>
   </div>
+</template>
 
+<template name="sidenav">
+  <ul class="nav nav-sidebar">
+    <li><a href="/">Home</a> </li>
+    {{#each categories}}
+      <li><a href="/{{category}}">{{category}}</a></li>
+    {{/each}}
+  </ul>
 </template>

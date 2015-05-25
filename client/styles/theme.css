@@ -103,3 +103,8 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+
+.centered{
+  text-align:center;
+  vertical-align:middle;
+}

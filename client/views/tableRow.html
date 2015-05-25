@@ -1,0 +1,28 @@
+<template name="tableRow">
+  <tr>
+    <td>{{appName}}</td>
+    <td>{{fileName}}</td>
+    <td>
+      <div class="checkbox centered">
+        <label for="complete">
+          <input name="complete" type="checkbox" checked="{{isChecked}}">{{complete}}
+        </label>
+      </div>
+    </td>
+    <td>
+      <div class="checkbox centered">
+        <label for="stage">
+          <input name="stage" type="checkbox">{{stage}}
+        </label>
+      </div>
+    </td>
+    <td>
+      <div class="checkbox centered">
+        <label for="fix">
+          <input name="fix" type="checkbox">{{fix}}
+        </label>
+      </div>
+    </td>
+    <td class="hidden-md hidden-sm hidden-xs">{{linkDescription}}</td>
+  </tr>
+</template>

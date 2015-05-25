@@ -1,5 +1,5 @@
 getCats = function(){
-  return Categories.find({}, {sort: {category: 1 }});
+  return Categories.find();
 };
 
 Template.nav.helpers({
@@ -9,13 +9,7 @@ Template.nav.helpers({
 });
 
 Template.sidenav.helpers({
-  categories: function(){
-    return getCats();
-  }
-});
-
-Template.addApp.helpers({
-  categories: function(){
-    return getCats();
-  }
+ categories: function(){
+   return getCats();
+ }
 });
