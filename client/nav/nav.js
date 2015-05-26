@@ -1,5 +1,5 @@
 getCats = function(){
-  return Categories.find();
+  return DB.Categories.find();
 };
 
 Template.nav.helpers({
